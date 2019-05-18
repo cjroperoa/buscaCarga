@@ -1,0 +1,7 @@
+Paleta de colores 
+BuscaCarga
+
+Primario 	#0053BA
+Secundario	#EA5200
+Terciario	#022F5B
+
