@@ -1,0 +1,20 @@
+----- Proyecto FINAL -----
+
+- PLANTEAMIENTO PROBLEMA. (Que, como y donde= => viabilidad del proyecto
+
+	Investigación estado del arte.
+	Análisis encuestas.
+
+- BUSINES CASE.
+	Requerimientos funcional, no funcional, técnico
+	MinimoViableProducto (DISEÑO)
+	Mvp solo diseño 10 vistas mínimo.
+
+- BASE DE DATOS.
+	En base a los requerimientos
+
+- VISTAS.
+	Ionic – Android
+
+- SERVIDOR.
+- API.
