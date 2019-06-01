@@ -2,16 +2,32 @@
   <ion-split-pane>
     <ion-menu>
       <ion-header>
-        <ion-toolbar>
+        <ion-toolbar  color="primary" class="ion-padding-start"  > 
           <ion-title>Menu</ion-title>
         </ion-toolbar>
+
       </ion-header>
       <ion-content>
-        <ion-list>
+          <div class="ion-padding-start ion-padding-top">
+              <ion-avatar>
+                  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                </ion-avatar>
+                <br>
+                <ion-menu-toggle>
+                    
+                      <ion-label color="primary">Nombre Usuario</ion-label>
+                    <br>
+                    <ion-label color="primary">Rol Usuario</ion-label>
+                    <ion-item-divider></ion-item-divider>
+             
+                </ion-menu-toggle>
+            </div>
+       
+               <ion-list lines="none"> 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
+              <ion-icon slot="start" [name]="p.icon" color="secondary"></ion-icon>
+              <ion-label color="medium">
                 {{p.title}}
               </ion-label>
             </ion-item>
