@@ -16,7 +16,11 @@ const routes: Routes = [
     loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'login', loadChildren: './Pages/login/login.module#LoginPageModule' },
-  { path: 'registry', loadChildren: './Pages/registry/registry.module#RegistryPageModule' }
+  { path: 'registry', loadChildren: './Pages/registry/registry.module#RegistryPageModule' },
+  { path: 'new-shipment-form', loadChildren: './Pages/new-shipment-form/new-shipment-form.module#NewShipmentFormPageModule' },
+  { path: 'shipment-details', loadChildren: './Pages/shipment-details/shipment-details.module#ShipmentDetailsPageModule' },
+  { path: 'new-shipment-category', loadChildren: './Pages/new-shipment-category/new-shipment-category.module#NewShipmentCategoryPageModule' }
+
 
 ];
 
