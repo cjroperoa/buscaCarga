@@ -1,9 +1,75 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>registry</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-header >
+    <ion-toolbar color="primary">
+      <ion-back-button defaultHref="login"></ion-back-button>
+      <ion-title slot="center">BuscaCarga</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
+  <ion-content>
 
-</ion-content>
+    <ion-grid ion-padding-top>
+      <!-- Inputs -->
+      <ion-row class="ion-justify-content-center" color="secondary">
+      <ion-col size="10">
+          <ion-item>
+            <ion-icon color="secondary" name="mail" slot="start"></ion-icon>
+            <ion-input 
+              color="secondary"
+              name="name" 
+              type="text" 
+              placeholder="Numero de identificación"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10">
+          <ion-item>
+            <ion-icon color="secondary" name="mail" slot="start"></ion-icon>
+            <ion-input 
+              color="secondary"
+              name="name" 
+              type="text" 
+              placeholder="tipo"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10">
+          <ion-item>
+            <ion-icon color="secondary" name="mail" slot="start"></ion-icon>
+            <ion-input 
+              color="secondary"
+              name="name" 
+              type="text" 
+              placeholder="Correo Electronico"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10">
+          <ion-item>
+            <ion-icon color="secondary" name="person" slot="start"></ion-icon>
+            <ion-input color="secondary" name="password" type="password" placeholder="Usuario"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10">
+          <ion-item>
+            <ion-icon color="secondary" name="key" slot="start"></ion-icon>
+            <ion-input color="secondary" name="password" type="password" placeholder="Contraseña"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="10">
+          <ion-item>
+            <ion-icon color="secondary" name="key" slot="start"></ion-icon>
+            <ion-input color="secondary" name="password" type="password" placeholder="Repetir contraseña"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <!-- Button: Registrar -->
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="10" class="ion-margin-top">
+          <ion-button routerLink="/login" shape="round" expand="full">
+            <ion-icon name="person-add"></ion-icon>
+            REGISTRAR
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-content>
+</ion-app>
