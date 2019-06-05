@@ -19,7 +19,8 @@ const routes: Routes = [
   { path: 'registry', loadChildren: './Pages/registry/registry.module#RegistryPageModule' },
   { path: 'new-shipment-form', loadChildren: './Pages/new-shipment-form/new-shipment-form.module#NewShipmentFormPageModule' },
   { path: 'shipment-details', loadChildren: './Pages/shipment-details/shipment-details.module#ShipmentDetailsPageModule' },
-  { path: 'new-shipment-category', loadChildren: './Pages/new-shipment-category/new-shipment-category.module#NewShipmentCategoryPageModule' }
+  { path: 'new-shipment-category', loadChildren: './Pages/new-shipment-category/new-shipment-category.module#NewShipmentCategoryPageModule' },  { path: 'search', loadChildren: './Pages/search/search.module#SearchPageModule' }
+
 
 
 ];

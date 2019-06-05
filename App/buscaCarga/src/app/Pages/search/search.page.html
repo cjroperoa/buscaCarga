@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+     
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Buscar Viaje
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid class="ion-padding-top">
+       <!-- Inputs -->
+       <ion-row class="ion-justify-content-center"  color="secondary">
+                 
+          <ion-col size="10" >
+            <ion-label color="primary"> Origen </ion-label>
+            <ion-item>
+              <ion-input color="secondary" required></ion-input>
+              
+              <ion-button >
+                  <ion-icon slot="icon-only" name="search"></ion-icon>
+              </ion-button>
+  
+            </ion-item>          
+          </ion-col>
+          <ion-col size="10" >
+            <ion-label color="primary"> Destino </ion-label>
+            <ion-item>
+              <ion-input color="secondary" required></ion-input>
+              
+              <ion-button >
+                  <ion-icon slot="icon-only" name="search"></ion-icon>
+              </ion-button>
+  
+            </ion-item>          
+          </ion-col>
+        </ion-row>
+      
+
+            <ion-button class="ion-float-right ion-padding-horizontal" (click)="stateValidate(true)">Primary</ion-button>
+</ion-grid>
+<ion-grid padding *ngIf="estate">
+  <!-- List of Sliding Items -->
+<ion-item-divider color="primary">
+  <ion-label>
+  Resultado de la busqueda # 10
+  </ion-label>
+</ion-item-divider>
+<ion-card *ngFor="let item of [1,1,1,1,1,1,1];let indice=index">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+    </ion-avatar>
+    <ion-label>Publicación {{indice+1}}</ion-label>
+    <ion-button >
+      Ver
+  </ion-button>
+  </ion-item>
+</ion-card>
+</ion-grid>
+</ion-content>
