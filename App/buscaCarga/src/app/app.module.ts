@@ -8,9 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
-
-  import { from } from 'rxjs';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 
 
@@ -21,7 +19,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-
+    NgbModule.forRoot()
   ],
   providers: [
     StatusBar,
