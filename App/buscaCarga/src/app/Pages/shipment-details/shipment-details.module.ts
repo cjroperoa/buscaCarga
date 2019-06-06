@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { ShipmentDetailsPage } from './shipment-details.page';
 
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+
 const routes: Routes = [
   {
     path: '',
@@ -19,8 +21,17 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    NgbModule.forRoot()
   ],
-  declarations: [ShipmentDetailsPage]
+  declarations: [
+    ShipmentDetailsPage
+  ],
+  exports : [
+    ShipmentDetailsPage
+  ],
+  bootstrap: [
+    ShipmentDetailsPage
+  ]
 })
 export class ShipmentDetailsPageModule {}
