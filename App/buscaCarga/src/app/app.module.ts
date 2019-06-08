@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
+import {OfferPageModule} from './Pages/offer/offer.module';
+
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    OfferPageModule
   ],
   providers: [
     StatusBar,

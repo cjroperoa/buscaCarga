@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NavController} from '@ionic/angular'
 
 @Component({
   selector: 'app-search',
@@ -7,8 +8,10 @@ import { Component } from '@angular/core';
 })
 export class SearchPage   {
 
-  constructor() { }
-
+  constructor(private navCtrl:NavController){}
+  pageDetailstransporter(){
+    this.navCtrl.navigateForward('shipment-details-transporter');
+  }
  
 public estate;
 

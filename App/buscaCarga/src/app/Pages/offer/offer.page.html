@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Mi Oferta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Inputs -->
+    <ion-row class="ion-justify-content-start">
+      
+
+      <ion-item>
+        <ion-label color="primary" position="floating"> Valor </ion-label>
+        <ion-input color="secondary" type="number" [(ngModel)]="binding" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="floating">Fecha Recogida</ion-label>
+        <ion-datetime value="2019-06-08" min="2019" max="2025" [dayShortNames]="customDayShortNames"
+          displayFormat="DD/MM/YYYY" monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+          color="secondary"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="floating">Fecha Entrega</ion-label>
+        <ion-datetime value="2019-06-08" min="2019" max="2025" [dayShortNames]="customDayShortNames"
+          displayFormat="DD/MM/YYYY" monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+          placeholder-color="secondary"></ion-datetime>
+      </ion-item>
+     <ion-row>
+       <ion-col size="12" >
+          <ion-item>
+              <ion-label color="primary" >Tipo Vehículo</ion-label>
+              <ion-select placeholder="Tipo Vehículo"  >
+                <ion-select-option value="1">Dobletroque</ion-select-option>
+                <ion-select-option value="2">Furgón</ion-select-option>
+                <ion-select-option value="3 ">Camioneta</ion-select-option>
+              </ion-select>
+      
+            </ion-item>
+       </ion-col>
+     </ion-row>
+      <!-- Textarea in an item with a floating label -->
+      <ion-item>
+        <ion-label color="primary" position="floating" placeholder="comentario">Description</ion-label>
+        <ion-textarea color="secondary" rows="4" maxlength="128"></ion-textarea>
+      </ion-item>
+    </ion-row>
+    <!-- B:ingresar -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="10">
+        <ion-button expand="full" shape="round" (click)="cerrarModal()">
+          <ion-icon name="log-in" slot="end"></ion-icon>
+          Ofertar
+        </ion-button>
+
+      </ion-col>
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

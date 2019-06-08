@@ -1,0 +1,85 @@
+<ion-app>
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Detalle Publicación</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+
+    <ngb-accordion [closeOthers]="true" activeIds="static-1">
+      <ngb-panel id="static-1" title="Detalle del envío">
+        <ng-template ngbPanelContent>
+
+          <ion-grid>
+
+            <ion-row *ngFor="let input of inputs">
+              <ion-col size="10">
+                <ion-label color="primary"> {{input.label}} </ion-label>
+              </ion-col>
+              <ion-col size="12">
+                <ion-text color="medium"> {{input.value}} </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel id="static-2">
+        <ng-template ngbPanelTitle>
+          <b>Mis Ofertas</b>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <ion-button class="ion-float-right ion-padding-horizontal"
+                        (click)='ofertar()'> 
+            Ofertar
+          </ion-button>
+
+          <ion-item-group >
+            <ion-item-divider color="success">
+              <ion-label>
+                Oferta más baja
+              </ion-label>
+            </ion-item-divider>
+            <ion-item-sliding>
+              <ion-item>
+                <ion-avatar slot="start">
+                  <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                </ion-avatar>
+                <ion-label>$ 150.000</ion-label>
+                
+              </ion-item>
+
+            </ion-item-sliding>
+          </ion-item-group>
+
+          <ion-item-group>
+            <ion-item-divider color="secondary">
+              <ion-label>
+                Mis Ofertas
+              </ion-label>
+            </ion-item-divider>
+          
+            <ion-item-sliding>
+              <ion-card *ngFor="let item of [1,1,1];let indice=index">
+                <ion-item>
+                  <ion-avatar slot="start">
+                    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+                  </ion-avatar>
+                  <ion-label>Oferta más baja</ion-label>
+                
+                </ion-item>
+              </ion-card>
+            </ion-item-sliding>
+          </ion-item-group>
+
+
+        </ng-template>
+      </ngb-panel>
+
+    </ngb-accordion>
+
+  </ion-content>
+
+</ion-app>
