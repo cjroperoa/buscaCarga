@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Oferta 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Inputs -->
+     <ion-item>
+        <ion-label color="primary" position="stacked"> Valor </ion-label>
+        <ion-input color="medium" type="number" [(ngModel)]="binding" readonly>$ 500.000</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="stacked">Fecha Recogida</ion-label>
+        <ion-input color="medium" readonly>11/12/2019</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="stacked">Fecha Entrega</ion-label>
+        <ion-input color="medium" readonly>10/08/1029</ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="primary" position="stacked">Tipo Vehículo</ion-label>
+        <ion-input color="medium" readonly>Carrotanque</ion-input>
+      </ion-item>
+   <!-- Disabled and readonly textarea in an item with a stacked label -->
+   <ion-item>
+      <ion-label color="primary" position="stacked">Comentario</ion-label>
+      <ion-textarea
+      cols="20"
+      color="medium"  
+      readonly
+      value="Ionic enables developers to build performant, high-quality mobile apps
+        
+        dfghjklertyui
+        .">
+      </ion-textarea>
+    </ion-item>
+    <!-- B:ingresar -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="10">
+        <ion-button expand="full" shape="round" (click)='cerrarModal()'>
+          <ion-icon name="log-out" slot="end"></ion-icon>
+          Ok
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -8,9 +8,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {OfferPageModule} from './Pages/offer/offer.module';
+import { SeeOfferPageModule } from './Pages/see-offer/see-offer.module';
 
 
 
@@ -22,7 +23,8 @@ import {OfferPageModule} from './Pages/offer/offer.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     NgbModule.forRoot(),
-    OfferPageModule
+    OfferPageModule,
+    SeeOfferPageModule
   ],
   providers: [
     StatusBar,

@@ -15,7 +15,7 @@ export class SearchPage   {
  
 public estate;
 
-async stateValidate(esta: boolean){
+async stateValidate(esta: boolean) {
   if (esta === false) {
     return this.estate = false;
   }  else {

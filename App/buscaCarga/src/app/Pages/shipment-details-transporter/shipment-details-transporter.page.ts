@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ModalController} from '@ionic/angular'
+import {ModalController} from '@ionic/angular';
 
-import {OfferPage} from '../offer/offer.page'
-import { Profile } from 'selenium-webdriver/firefox';
+import {OfferPage} from '../offer/offer.page';
+
 @Component({
   selector: 'app-shipment-details-transporter',
   templateUrl: './shipment-details-transporter.page.html',
@@ -17,57 +17,57 @@ export class ShipmentDetailsTransporterPage implements OnInit {
       value: 'loremp ipsum dolor sit amet. conseteur sadipscing'
     },
     {
-      label: "Tipo de carga",
-      icon:"",
+      label: 'Tipo de carga',
+      icon: '',
       state: false,
-      value: "loremp ipsum dolor sit amet. conseteur sadipscing"
+      value: 'loremp ipsum dolor sit amet. conseteur sadipscing'
     },
     {
-      label: "Origen",
-      icon: "search",
+      label: 'Origen',
+      icon: 'search',
       state: true,
-      value: "loremp ipsum dolor"
+      value: 'loremp ipsum dolor'
     },
     {
-      label: "Destino",
-      icon: "search",
+      label: 'Destino',
+      icon: 'search',
       state: true,
-      value: "loremp ipsum dolor"
+      value: 'loremp ipsum dolor'
     },
     {
-      label: "Fecha Recogida",
-      icon: "calendar",
+      label: 'Fecha Recogida',
+      icon: 'calendar',
       state: true,
-      value: "01/01/2019"
+      value: '01/01/2019'
     },
     {
-      label: "Fecha Entrega",
-      icon: "calendar",
+      label: 'Fecha Entrega',
+      icon: 'calendar',
       state: true,
-      value: "11/02/2019"
+      value: '11/02/2019'
     }
   ];
   
   public shipValues = [
     {
-      label: "Largo",
-      placeholder: "cm",
-      value: "00"
+      label: 'Largo',
+      placeholder: 'cm',
+      value: '00'
     },
     {
-      label: "Ancho",
-      placeholder: "cm",
-      value: "00"
+      label: 'Ancho',
+      placeholder: 'cm',
+      value: '00'
     },
     {
-      label: "Alto",
-      placeholder: "cm",
-      value: "00"
+      label: 'Alto',
+      placeholder: 'cm',
+      value: '00'
     },
     {
-      label: "Peso",
-      placeholder: "Kg",
-      value: "00"
+      label: 'Peso',
+      placeholder: 'Kg',
+      value: '00'
     }
   ];
   constructor(public modalController: ModalController) { }
