@@ -21,7 +21,8 @@ const routes: Routes = [
   { path: 'shipment-details', loadChildren: './Pages/shipment-details/shipment-details.module#ShipmentDetailsPageModule' },
   { path: 'new-shipment-category', loadChildren: './Pages/new-shipment-category/new-shipment-category.module#NewShipmentCategoryPageModule' },  { path: 'search', loadChildren: './Pages/search/search.module#SearchPageModule' },
   { path: 'shipment-details-transporter', loadChildren: './Pages/shipment-details-transporter/shipment-details-transporter.module#ShipmentDetailsTransporterPageModule' },
-  { path: 'offer', loadChildren: './Pages/offer/offer.module#OfferPageModule' }
+  { path: 'offer', loadChildren: './Pages/offer/offer.module#OfferPageModule' },
+  { path: 'my-offers', loadChildren: './Pages/my-offers/my-offers.module#MyOffersPageModule' }
 
 
 

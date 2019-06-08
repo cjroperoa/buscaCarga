@@ -8,18 +8,18 @@ import {NavController} from '@ionic/angular'
 })
 export class SearchPage   {
 
-  constructor(private navCtrl:NavController){}
-  pageDetailstransporter(){
+  constructor(private navCtrl: NavController) {}
+  pageDetailstransporter() {
     this.navCtrl.navigateForward('shipment-details-transporter');
   }
  
 public estate;
 
-async stateValidate(esta:boolean){
-  if (esta == false) {
-    return this.estate=false;
-  }  else{
-    return this.estate=true;
+async stateValidate(esta: boolean){
+  if (esta === false) {
+    return this.estate = false;
+  }  else {
+    return this.estate = true;
   }
-  };
+  }
 }

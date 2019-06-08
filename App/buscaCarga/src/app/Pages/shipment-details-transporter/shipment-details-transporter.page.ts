@@ -11,10 +11,10 @@ import { Profile } from 'selenium-webdriver/firefox';
 export class ShipmentDetailsTransporterPage implements OnInit {
   public inputs = [
     {
-      label: "Titulo de envío",
-      icon:"",
+      label: 'Titulo de envío',
+      icon: '',
       state : false,
-      value: "loremp ipsum dolor sit amet. conseteur sadipscing"
+      value: 'loremp ipsum dolor sit amet. conseteur sadipscing'
     },
     {
       label: "Tipo de carga",
