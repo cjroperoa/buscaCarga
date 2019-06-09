@@ -23,7 +23,9 @@ const routes: Routes = [
   { path: 'shipment-details-transporter', loadChildren: './Pages/shipment-details-transporter/shipment-details-transporter.module#ShipmentDetailsTransporterPageModule' },
   { path: 'offer', loadChildren: './Pages/offer/offer.module#OfferPageModule' },
   { path: 'my-offers', loadChildren: './Pages/my-offers/my-offers.module#MyOffersPageModule' },
-  { path: 'see-offer', loadChildren: './Pages/see-offer/see-offer.module#SeeOfferPageModule' }
+  { path: 'see-offer', loadChildren: './Pages/see-offer/see-offer.module#SeeOfferPageModule' },
+  { path: 'add-car-transporter', loadChildren: './Pages/add-car-transporter/add-car-transporter.module#AddCarTransporterPageModule' },
+  { path: 'membership-photo', loadChildren: './Pages/membership-photo/membership-photo.module#MembershipPhotoPageModule' }
 
 
 
