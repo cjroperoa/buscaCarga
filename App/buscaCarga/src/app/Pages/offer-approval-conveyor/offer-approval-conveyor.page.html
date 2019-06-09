@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Aprobación Oferta</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ngb-accordion [closeOthers]="true" activeIds="static-1">
+      <ngb-panel id="static-1" title="Detalle del envío">
+        <ng-template ngbPanelContent>
+
+          <ion-grid>
+
+            <ion-row *ngFor="let input of inputs">
+              <ion-col size="10">
+                <ion-label color="primary"> {{input.label}} </ion-label>
+              </ion-col>
+              <ion-col size="12">
+                <ion-text color="medium"> {{input.value}} </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel id="static-2">
+        <ng-template ngbPanelTitle>
+          <b>Datos Contacto Remitente</b>
+        </ng-template>
+        <ng-template ngbPanelContent>
+       
+          <ion-grid>
+
+            <ion-row>
+              <ion-col size="10">
+                <ion-label color="primary"> Nombre Remitente </ion-label>
+              </ion-col>
+              <ion-col size="12">
+                <ion-text color="medium"> asa </ion-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="10">
+                <ion-label color="primary"> Telefono </ion-label>
+              </ion-col>
+              <ion-col size="12">
+                <ion-text color="medium"> 123456 </ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+        </ng-template>
+      </ngb-panel>
+ </ngb-accordion>
+</ion-content>

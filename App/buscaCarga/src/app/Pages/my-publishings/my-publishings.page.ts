@@ -1,18 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {  NavController} from "@ionic/angular";
-
 @Component({
-  selector: 'app-my-offers',
-  templateUrl: './my-offers.page.html',
-  styleUrls: ['./my-offers.page.scss'],
+  selector: 'app-my-publishings',
+  templateUrl: './my-publishings.page.html',
+  styleUrls: ['./my-publishings.page.scss'],
 })
-export class MyOffersPage implements OnInit {
+export class MyPublishingsPage implements OnInit {
 
   constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
   }
-
   async VerPublicacion(){
     this.navCtrl.navigateForward('shipment-details-transporter');
   }

@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title color="primary">Mi Oferta</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
@@ -29,7 +30,7 @@
      <ion-row>
        <ion-col size="12" >
           <ion-item>
-              <ion-label color="primary" >Tipo Vehículo</ion-label>
+              <ion-label color="primary" >Vehículo</ion-label>
               <ion-select placeholder="Tipo Vehículo"  >
                 <ion-select-option value="1">Dobletroque</ion-select-option>
                 <ion-select-option value="2">Furgón</ion-select-option>
@@ -48,9 +49,13 @@
     <!-- B:ingresar -->
     <ion-row class="ion-justify-content-center">
       <ion-col size="10">
-        <ion-button expand="full" shape="round" (click)="cerrarModal()">
+        <ion-button expand="small" shape="round" >
           <ion-icon name="log-in" slot="end"></ion-icon>
           Ofertar
+        </ion-button>
+        <ion-button expand="small" shape="round" (click)="cerrarModal()" >
+          <ion-icon name="log-in" slot="end"></ion-icon>
+          Cerrar
         </ion-button>
 
       </ion-col>

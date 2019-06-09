@@ -25,7 +25,10 @@ const routes: Routes = [
   { path: 'my-offers', loadChildren: './Pages/my-offers/my-offers.module#MyOffersPageModule' },
   { path: 'see-offer', loadChildren: './Pages/see-offer/see-offer.module#SeeOfferPageModule' },
   { path: 'add-car-transporter', loadChildren: './Pages/add-car-transporter/add-car-transporter.module#AddCarTransporterPageModule' },
-  { path: 'membership-photo', loadChildren: './Pages/membership-photo/membership-photo.module#MembershipPhotoPageModule' }
+  { path: 'membership-photo', loadChildren: './Pages/membership-photo/membership-photo.module#MembershipPhotoPageModule' },
+  { path: 'offer-approval-conveyor', loadChildren: './Pages/offer-approval-conveyor/offer-approval-conveyor.module#OfferApprovalConveyorPageModule' },
+  { path: 'offer-approval-sender', loadChildren: './Pages/offer-approval-sender/offer-approval-sender.module#OfferApprovalSenderPageModule' },
+  { path: 'my-publishings', loadChildren: './Pages/my-publishings/my-publishings.module#MyPublishingsPageModule' }
 
 
 

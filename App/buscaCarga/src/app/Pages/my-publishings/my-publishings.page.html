@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+             <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Mis Publicaciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid padding >
+      <!-- List of Sliding Items -->
+
+    <ion-card *ngFor="let item of [1,1,1,1,1,1,1];let indice=index">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+        </ion-avatar>
+        <ion-label>Publicación {{indice+1}}</ion-label>
+        <ion-button  (click)='VerPublicacion()' >
+          Ver
+      </ion-button>
+      </ion-item>
+    </ion-card>
+    </ion-grid>
+</ion-content>

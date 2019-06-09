@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {OfferPageModule} from './Pages/offer/offer.module';
 import { SeeOfferPageModule } from './Pages/see-offer/see-offer.module';
+import { OfferApprovalConveyorPageModule  } from "./Pages/offer-approval-conveyor/offer-approval-conveyor.module";
 
 
 
@@ -24,7 +25,8 @@ import { SeeOfferPageModule } from './Pages/see-offer/see-offer.module';
     AppRoutingModule,
     NgbModule.forRoot(),
     OfferPageModule,
-    SeeOfferPageModule
+    SeeOfferPageModule,
+    OfferApprovalConveyorPageModule
   ],
   providers: [
     StatusBar,
