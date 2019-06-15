@@ -5,7 +5,7 @@ import { Routes, RouterModule } from "@angular/router";
 const routes: Routes = [
   {
     path: 'list',
-    loadChildren: './list.module#ListPageModule'
+    loadChildren: './list/list.module#ListPageModule'
   },
   { path: 'new-shipment-form', 
     loadChildren: './new-shipment-form/new-shipment-form.module#NewShipmentFormPageModule' 
