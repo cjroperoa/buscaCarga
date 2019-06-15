@@ -10,9 +10,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import {OfferPageModule} from './Pages/offer/offer.module';
-import { SeeOfferPageModule } from './Pages/see-offer/see-offer.module';
-import { OfferApprovalConveyorPageModule  } from "./Pages/offer-approval-conveyor/offer-approval-conveyor.module";
+// import { OfferPageModule} from './Pages/offer/offer.module';
+// import { SeeOfferPageModule } from './Pages/see-offer/see-offer.module';
+// import { OfferApprovalConveyorPageModule  } from "./Pages/offer-approval-conveyor/offer-approval-conveyor.module";
+
 import { IonicStorageModule } from "@ionic/storage";
 
 
@@ -25,9 +26,9 @@ import { IonicStorageModule } from "@ionic/storage";
     IonicModule.forRoot(),
     AppRoutingModule,
     NgbModule.forRoot(),
-    OfferPageModule,
-    SeeOfferPageModule,
-    OfferApprovalConveyorPageModule,
+    // OfferPageModule,
+    // SeeOfferPageModule,
+    // OfferApprovalConveyorPageModule,
     IonicStorageModule.forRoot()
   ],
   providers: [
