@@ -15,11 +15,11 @@ const routes: Routes = [
   { path: 'registry', 
     loadChildren: './Public/registry/registry.module#RegistryPageModule' 
   },
-  // {
-  //   path: 'pages',
-  //   canActivate: [AuthGuardService],
-  //   loadChildren: './Pages/pages-routing#MemberRoutingModule'
-  // }
+  {
+    path: 'pages',
+    canActivate: [AuthGuardService],
+    loadChildren: './Pages/pages-routing.module#PagesRoutingModule'
+  }
 ];
 
 @NgModule({
