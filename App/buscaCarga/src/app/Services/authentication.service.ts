@@ -24,12 +24,12 @@ export class AuthenticationService {
   this.platform.ready().then(() => {
     this.checkToken();
   })
-   }
+   };
 
-  login() {
-    // 
-    return  this.storage.set(TOKEN_KEY, 'Bearer 123456').then(res => {
+  login() { 
+    return this.storage.set(TOKEN_KEY, 'Bearer 123456').then( res => {
       this.authenticationState.next(true);
+      console.log(this.authenticationState);
     });
   }
 
@@ -45,7 +45,7 @@ export class AuthenticationService {
 
   checkToken() {
     return this.storage.get(TOKEN_KEY).then(res => {
-      if (res) {
+      if (!res) {
         this.authenticationState.next(true);
       }
     });
