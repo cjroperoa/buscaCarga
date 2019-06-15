@@ -40,7 +40,7 @@ export class AuthenticationService {
   }
   
   isActivated() {
-    this.authenticationState.value;
+    return this.authenticationState.value;
   }
 
   checkToken() {
