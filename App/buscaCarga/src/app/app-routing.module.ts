@@ -19,12 +19,17 @@ const routes: Routes = [
     path: 'pages',
     canActivate: [AuthGuardService],
     loadChildren: './Pages/pages-routing.module#PagesRoutingModule'
-  }
+  },
+  // {
+  //   path: 'list',
+  //   canActivate: [AuthGuardService],
+  //   loadChildren: './Pages/list/list.module.#ListPageModule'
+  // }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes)
   ],
   exports: [RouterModule]
 })
