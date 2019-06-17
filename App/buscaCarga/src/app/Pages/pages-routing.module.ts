@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'new-shipment-form', 
+  { path: 'new-shipment-form',
     loadChildren: './new-shipment-form/new-shipment-form.module#NewShipmentFormPageModule' 
   },
-  { path: 'shipment-details', 
-    loadChildren: './shipment-details/shipment-details.module#ShipmentDetailsPageModule' 
+  { path: 'shipment-details',
+    loadChildren: './shipment-details/shipment-details.module#ShipmentDetailsPageModule'
   },
   { path: 'new-shipment-category', 
     loadChildren: './new-shipment-category/new-shipment-category.module#NewShipmentCategoryPageModule' 

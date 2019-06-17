@@ -42,6 +42,21 @@
             </ion-row>
           </ion-grid>
     </ion-card-content>
+   <ion-card-content>
+     <ion-grid>
+      <ion-item>
+        <ion-label>Origen</ion-label>
+        <ionic-selectable item-content 
+        [(ngModel)]='port'
+         itemValueField="id"
+          itemTextField="name"
+           [items]="ports"
+            [canSearch]="true"
+            (onChange)='portChange($event)'>
+        </ionic-selectable>
+      </ion-item>
+     </ion-grid>
+   </ion-card-content>
   </ion-content>
 
 </ion-app>

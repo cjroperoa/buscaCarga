@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { OfferApprovalConveyorPage } from './offer-approval-conveyor.page';
 
-import {NgbModule  } from "@ng-bootstrap/ng-bootstrap";
+import {NgbModule  } from '@ng-bootstrap/ng-bootstrap';
 const routes: Routes = [
   {
     path: '',

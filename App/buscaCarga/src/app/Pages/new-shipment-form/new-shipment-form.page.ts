@@ -1,14 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { text } from '@angular/core/src/render3';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
+import { IonicSelectableComponent } from 'ionic-selectable';
+import { PortService } from '../../services';
 
+import { Port } from '../../types';
 @Component({
   selector: 'app-new-shipment-form',
   templateUrl: './new-shipment-form.page.html',
   styleUrls: ['./new-shipment-form.page.scss'],
 })
-export class NewShipmentFormPage {
+
+export class NewShipmentFormPage implements OnInit {
+  ports: Port[];
+  port: Port;
   icon = true;
+
   public inputs = [
     {
       label: "Titulo de envío",
@@ -63,13 +70,31 @@ export class NewShipmentFormPage {
   
   inputNoneIcon(i) {
     console.log(i);
-    if (this.inputs[this.inputs.length].icon === "") {
+    if (this.inputs[this.inputs.length].icon === '') {
       return false;
     } else {
       return true;
     }
   }
 
-  constructor() {
-   }
+
+  constructor( private portService: PortService) {}
+  ngOnInit() {
+    this.ports = this.portService.getPorts();
+  }
+
+  // portChange(event: {
+  //   component: IonicSelectableComponent,
+  //   value: any
+  // }) {
+  //   console.log('port:', event.value);
+  // }
+  portChange(event: {
+    component: IonicSelectableComponent,
+    value: any
+  }) {
+    console.log('port:', event.value);
+  }
+
+
 }
