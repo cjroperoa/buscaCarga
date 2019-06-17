@@ -10,14 +10,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-// import { OfferPageModule} from './Pages/offer/offer.module';
-// import { SeeOfferPageModule } from './Pages/see-offer/see-offer.module';
-// import { OfferApprovalConveyorPageModule  } from "./Pages/offer-approval-conveyor/offer-approval-conveyor.module";
+ import { OfferPageModule} from './Pages/offer/offer.module';
+ import { SeeOfferPageModule } from './Pages/see-offer/see-offer.module';
+ import { OfferApprovalConveyorPageModule  } from "./Pages/offer-approval-conveyor/offer-approval-conveyor.module";
 
-import { IonicStorageModule } from "@ionic/storage";
+import { IonicStorageModule } from '@ionic/storage';
 
+import { IonicSelectableModule } from 'ionic-selectable';
 
+import { NewShipmentFormPageModule } from './Pages/new-shipment-form/new-shipment-form.module';
 
+import { PortService, CiudadService } from './services';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,15 +29,18 @@ import { IonicStorageModule } from "@ionic/storage";
     IonicModule.forRoot(),
     AppRoutingModule,
     NgbModule.forRoot(),
-    // OfferPageModule,
-    // SeeOfferPageModule,
-    // OfferApprovalConveyorPageModule,
-    IonicStorageModule.forRoot()
+     OfferPageModule,
+     SeeOfferPageModule,
+     OfferApprovalConveyorPageModule,
+     IonicSelectableModule,
+    IonicStorageModule.forRoot(),
+    NewShipmentFormPageModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    PortService,CiudadService
   ],
   bootstrap: [AppComponent]
 })
