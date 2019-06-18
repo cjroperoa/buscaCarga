@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { text } from '@angular/core/src/render3';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { IonicSelectableComponent } from 'ionic-selectable';
-import { PortService } from '../../services';
+import { PortService, CiudadService } from '../../services';
 
 import { Port } from '../../types';
+import { Usuario } from 'src/app/models/usuario.model';
+
 @Component({
   selector: 'app-new-shipment-form',
   templateUrl: './new-shipment-form.page.html',
@@ -12,8 +14,7 @@ import { Port } from '../../types';
 })
 
 export class NewShipmentFormPage implements OnInit {
-  ports: Port[];
-  port: Port;
+ 
   icon = true;
 
   public inputs = [
@@ -68,33 +69,26 @@ export class NewShipmentFormPage implements OnInit {
     }
   ]
   
-  inputNoneIcon(i) {
-    console.log(i);
-    if (this.inputs[this.inputs.length].icon === '') {
-      return false;
-    } else {
-      return true;
-    }
+
+
+  usuarios: any[] = [];
+  textoBuscar = '';
+  constructor( 
+ 
+    private usuariosService: CiudadService
+   ) {
+     this.usuariosService.getUsuarios()
+     .subscribe( resp => this.usuarios= resp)
+   }
+
+  ngOnInit() {}
+
+
+  buscarUsuario(event){
+    const texto = event.target.value;
+  this.textoBuscar= texto;
+  console.log(texto);
+   
   }
-
-
-  constructor( private portService: PortService) {}
-  ngOnInit() {
-    this.ports = this.portService.getPorts();
-  }
-
-  // portChange(event: {
-  //   component: IonicSelectableComponent,
-  //   value: any
-  // }) {
-  //   console.log('port:', event.value);
-  // }
-  portChange(event: {
-    component: IonicSelectableComponent,
-    value: any
-  }) {
-    console.log('port:', event.value);
-  }
-
-
+  
 }

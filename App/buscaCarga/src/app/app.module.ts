@@ -20,7 +20,9 @@ import { IonicSelectableModule } from 'ionic-selectable';
 
 import { NewShipmentFormPageModule } from './Pages/new-shipment-form/new-shipment-form.module';
 
-import { PortService, CiudadService } from './services';
+import {  CiudadService } from './services';
+
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -34,13 +36,14 @@ import { PortService, CiudadService } from './services';
      OfferApprovalConveyorPageModule,
      IonicSelectableModule,
     IonicStorageModule.forRoot(),
-    NewShipmentFormPageModule
+    NewShipmentFormPageModule,
+    HttpClientModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    PortService,CiudadService
+    CiudadService
   ],
   bootstrap: [AppComponent]
 })

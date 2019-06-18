@@ -10,6 +10,28 @@
   <ion-content>
     <ion-card-content>
         <ion-grid>
+          <ion-item>
+            <ion-label color="primary" position="floating">Titulo Envío</ion-label>
+            <ion-input color="secondary" required></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label color="primary" position="floating">Tipo de carga</ion-label>
+              <ion-input color="secondary" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" >Origen</ion-label>
+              <ionic-selectable item-content 
+              [(ngModel)]='id'
+               itemValueField="id"
+                itemTextField="name"
+                 [items]="usuarios"
+                  [canSearch]="true"
+                  (ionChange)='buscarUsuario($event)'>
+              </ionic-selectable>
+             
+            </ion-item>
+           </ion-grid>
+        <ion-grid>
             <ion-row class="ion-justify-content-center">
               <ion-col size="12" *ngFor="let input of inputs">
                 <ion-label color="primary"> {{ input.label }} </ion-label>
@@ -33,6 +55,7 @@
                   maxlength="4">
                 </ion-input>
               </ion-col>
+            
               <ion-col size="10">
                 <ion-button     expand="full" shape="round" routerLink="/shipment-details">
                     <ion-icon name="add-circle-outline" slot="start"></ion-icon>
@@ -47,16 +70,17 @@
       <ion-item>
         <ion-label>Origen</ion-label>
         <ionic-selectable item-content 
-        [(ngModel)]='port'
+        [(ngModel)]='id'
          itemValueField="id"
           itemTextField="name"
-           [items]="ports"
+           [items]="usuarios"
             [canSearch]="true"
-            (onChange)='portChange($event)'>
+            (ionChange)='buscarUsuario($event)'>
         </ionic-selectable>
       </ion-item>
      </ion-grid>
    </ion-card-content>
+
   </ion-content>
 
 </ion-app>

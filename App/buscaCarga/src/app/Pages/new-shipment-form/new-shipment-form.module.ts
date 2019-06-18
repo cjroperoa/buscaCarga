@@ -8,6 +8,7 @@ import { IonicModule } from '@ionic/angular';
 import { NewShipmentFormPage } from './new-shipment-form.page';
 
 import { IonicSelectableModule } from 'ionic-selectable';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 const routes: Routes = [
   {
     path: '',
@@ -21,7 +22,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    IonicSelectableModule
+    IonicSelectableModule,
+    PipesModule
   ],
   declarations: [NewShipmentFormPage]
 })
