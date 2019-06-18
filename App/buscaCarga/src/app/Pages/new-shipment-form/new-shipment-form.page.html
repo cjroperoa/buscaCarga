@@ -9,78 +9,62 @@
   </ion-header>
   <ion-content>
     <ion-card-content>
-        <ion-grid>
-          <ion-item>
-            <ion-label color="primary" position="floating">Titulo Envío</ion-label>
-            <ion-input color="secondary" required></ion-input>
-          </ion-item>
-          <ion-item>
-              <ion-label color="primary" position="floating">Tipo de carga</ion-label>
-              <ion-input color="secondary" required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label color="primary" >Origen</ion-label>
-              <ionic-selectable item-content 
+      <ion-grid>
+        <ion-item>
+          <ion-label color="primary" position="floating">Titulo Envío</ion-label>
+          <ion-input color="secondary" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" position="floating">Tipo de carga</ion-label>
+          <ion-input color="secondary" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary">Origen</ion-label>
+          <ionic-selectable item-content 
               [(ngModel)]='id'
-               itemValueField="id"
-                itemTextField="name"
-                 [items]="usuarios"
-                  [canSearch]="true"
-                  (ionChange)='buscarUsuario($event)'>
-              </ionic-selectable>
-             
-            </ion-item>
-           </ion-grid>
-        <ion-grid>
-            <ion-row class="ion-justify-content-center">
-              <ion-col size="12" *ngFor="let input of inputs">
-                <ion-label color="primary"> {{ input.label }} </ion-label>
-                <ion-item>
-                  <ion-input color="secondary" required></ion-input>
-                  <span *ngIf=input.state>
-                  <ion-button color="secondary">
-                      <ion-icon slot="icon-only" name="{{ input.icon }}"></ion-icon>
-                  </ion-button>
-                </span>
-                </ion-item>          
-              </ion-col>
-              <ion-col size="6" *ngFor="let shipValue of shipValues" class="ion-justify-content-center">
-                <ion-label color="secondary" class="ion-float-start">
-                  {{ shipValue.label }}
-                </ion-label>
-                <ion-input 
-                  type="number" 
-                  placeholder=" {{ shipValue.placeholder }}"
-                  size="4"
-                  maxlength="4">
-                </ion-input>
-              </ion-col>
-            
-              <ion-col size="10">
-                <ion-button     expand="full" shape="round" routerLink="/shipment-details">
-                    <ion-icon name="add-circle-outline" slot="start"></ion-icon>
-                    REGISTRAR OFERTA
-                </ion-button>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-    </ion-card-content>
-   <ion-card-content>
-     <ion-grid>
-      <ion-item>
-        <ion-label>Origen</ion-label>
-        <ionic-selectable item-content 
-        [(ngModel)]='id'
-         itemValueField="id"
-          itemTextField="name"
-           [items]="usuarios"
-            [canSearch]="true"
-            (ionChange)='buscarUsuario($event)'>
-        </ionic-selectable>
-      </ion-item>
-     </ion-grid>
-   </ion-card-content>
+              itemValueField="id"
+              itemTextField="name"
+              [items]="usuarios"
+              [canSearch]="true"
+              closeButtonText="Cerrar"
+              closeButtonSlot="end"
+              searchPlaceholder="Buscar"
+              searchFailText="Sin Información"
+              (ionChange)='buscarUsuario($event)'>
+          </ionic-selectable>
 
-  </ion-content>
+        </ion-item>
+      </ion-grid>
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12" *ngFor="let input of inputs">
+            <ion-label color="primary"> {{ input.label }} </ion-label>
+            <ion-item>
+              <ion-input color="secondary" required></ion-input>
+              <span *ngIf=input.state>
+                <ion-button color="secondary">
+                  <ion-icon slot="icon-only" name="{{ input.icon }}"></ion-icon>
+                </ion-button>
+              </span>
+            </ion-item>
+          </ion-col>
+          <ion-col size="6" *ngFor="let shipValue of shipValues" class="ion-justify-content-center">
+            <ion-label color="secondary" class="ion-float-start">
+              {{ shipValue.label }}
+            </ion-label>
+            <ion-input type="number" placeholder=" {{ shipValue.placeholder }}" size="4" maxlength="4">
+            </ion-input>
+          </ion-col>
+
+          <ion-col size="10">
+            <ion-button expand="full" shape="round" routerLink="/shipment-details">
+              <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+              REGISTRAR OFERTA
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+</ion-content>
 
 </ion-app>
