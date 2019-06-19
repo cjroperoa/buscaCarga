@@ -15,7 +15,7 @@ import { Usuario } from 'src/app/models/usuario.model';
 
 export class NewShipmentFormPage implements OnInit {
   ciudadO : Usuario;
-  ciudad : Usuario;
+  ciudadD : Usuario;
   icon = true;
 
   usuarios: Usuario[] = [];

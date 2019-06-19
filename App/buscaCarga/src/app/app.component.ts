@@ -12,28 +12,28 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  // public appPages = [
-  //   {
-  //     title: 'Nuevo Envío',
-  //     url: '/new-shipment-category',
-  //     icon: 'home'
-  //   },
-  //   {
-  //     title: 'Membresia',
-  //     url: '/membership-photo',
-  //     icon: 'cash'
-  //   },
-  //   {
-  //     title: 'Ofertas',
-  //     url: '/my-offers',
-  //     icon: 'cart'
-  //   },
-  //   {
-  //     title: 'Mis Envios',
-  //     url: '/my-publishings',
-  //     icon: 'pin'
-  //   }
-  // ];
+  public appPages = [
+    {
+      title: 'Nuevo Envío',
+      url: '/new-shipment-category',
+      icon: 'home'
+    },
+    {
+      title: 'Membresia',
+      url: '/membership-photo',
+      icon: 'cash'
+    },
+    {
+      title: 'Ofertas',
+      url: '/my-offers',
+      icon: 'cart'
+    },
+    {
+      title: 'Mis Envios',
+      url: '/my-publishings',
+      icon: 'pin'
+    }
+  ];
 
   constructor(
     private platform: Platform,
