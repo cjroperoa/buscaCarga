@@ -9,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class OfferPage implements OnInit {
   constructor(private modalController: ModalController) { }
-
+  valor : number;
   ngOnInit() {
   }
 

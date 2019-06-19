@@ -25,6 +25,8 @@ const routes: Routes = [
     IonicSelectableModule,
     PipesModule
   ],
-  declarations: [NewShipmentFormPage]
+  declarations: [NewShipmentFormPage],
+  exports: [NewShipmentFormPage],
+  bootstrap: [NewShipmentFormPage]
 })
 export class NewShipmentFormPageModule {}

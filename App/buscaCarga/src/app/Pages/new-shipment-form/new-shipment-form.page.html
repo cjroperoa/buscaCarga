@@ -20,44 +20,52 @@
         </ion-item>
         <ion-item>
           <ion-label color="primary">Origen</ion-label>
-          <ionic-selectable item-content 
-              [(ngModel)]='id'
-              itemValueField="id"
-              itemTextField="name"
-              [items]="usuarios"
-              [canSearch]="true"
-              closeButtonText="Cerrar"
-              closeButtonSlot="end"
-              searchPlaceholder="Buscar"
-              searchFailText="Sin Información"
-              (ionChange)='buscarUsuario($event)'>
+          <ionic-selectable item-content [(ngModel)]='ciudad' itemValueField="id" itemTextField="name"
+            [items]="usuarios" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
+            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarUsuario($event)'>
           </ionic-selectable>
 
         </ion-item>
-      </ion-grid>
-      <ion-grid>
-        <ion-row class="ion-justify-content-center">
-          <ion-col size="12" *ngFor="let input of inputs">
-            <ion-label color="primary"> {{ input.label }} </ion-label>
-            <ion-item>
-              <ion-input color="secondary" required></ion-input>
-              <span *ngIf=input.state>
-                <ion-button color="secondary">
-                  <ion-icon slot="icon-only" name="{{ input.icon }}"></ion-icon>
-                </ion-button>
-              </span>
-            </ion-item>
-          </ion-col>
-          <ion-col size="6" *ngFor="let shipValue of shipValues" class="ion-justify-content-center">
-            <ion-label color="secondary" class="ion-float-start">
-              {{ shipValue.label }}
-            </ion-label>
-            <ion-input type="number" placeholder=" {{ shipValue.placeholder }}" size="4" maxlength="4">
-            </ion-input>
-          </ion-col>
+        <ion-item>
+          <ion-label color="primary">Destino</ion-label>
+          <ionic-selectable item-content [(ngModel)]='ciudad' itemValueField="id" itemTextField="name"
+            [items]="usuarios" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
+            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarUsuario($event)'>
+          </ionic-selectable>
 
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" position="floating">Fecha Recogida</ion-label>
+          <ion-datetime value="2019-06-08" min="2019" max="2025" [dayShortNames]="customDayShortNames"
+            displayFormat="DD/MM/YYYY" monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+            color="secondary" doneText="Ok"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label color="primary" position="floating">Fecha Entrega</ion-label>
+          <ion-datetime value="2019-06-08" min="2019" max="2025" [dayShortNames]="customDayShortNames"
+            displayFormat="DD/MM/YYYY" monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
+            placeholder-color="secondary" doneText="Ok"></ion-datetime>
+        </ion-item>
+
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="6" class="ion-justify-content-center">
+            <ion-label color="primary" class="ion-float-start">Largo</ion-label>
+            <ion-input type="number" placeholder="Cm" size="4" maxlength="4" color="secondary"></ion-input>
+          </ion-col>
+          <ion-col size="6" class="ion-justify-content-center">
+            <ion-label color="primary" class="ion-float-start">Ancho</ion-label>
+            <ion-input type="number" placeholder="Cm" size="4" maxlength="4" color="secondary"></ion-input>
+          </ion-col>
+          <ion-col size="6" class="ion-justify-content-center">
+            <ion-label color="primary" class="ion-float-start">Alto</ion-label>
+            <ion-input type="number" placeholder="Cm" size="4" maxlength="4" color="secondary"></ion-input>
+          </ion-col>
+          <ion-col size="6" class="ion-justify-content-center">
+            <ion-label color="primary" class="ion-float-start">Peso</ion-label>
+            <ion-input type="number" placeholder="Cm" size="4" maxlength="4" color="secondary"></ion-input>
+          </ion-col>
           <ion-col size="10">
-            <ion-button expand="full" shape="round" routerLink="/shipment-details">
+            <ion-button expand="full" shape="round" routerLink="./../../shipment-details">
               <ion-icon name="add-circle-outline" slot="start"></ion-icon>
               REGISTRAR OFERTA
             </ion-button>
@@ -65,6 +73,6 @@
         </ion-row>
       </ion-grid>
     </ion-card-content>
-</ion-content>
+  </ion-content>
 
 </ion-app>

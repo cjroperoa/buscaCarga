@@ -13,19 +13,19 @@
 
       <ion-item>
         <ion-label color="primary" position="floating"> Valor </ion-label>
-        <ion-input color="secondary" type="number" [(ngModel)]='binding' required></ion-input>
+        <ion-input color="secondary" type="number" [(ngModel)]='valor' required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="primary" position="floating">Fecha Recogida</ion-label>
         <ion-datetime value="2019-06-08" min="2019" max="2025" [dayShortNames]="customDayShortNames"
           displayFormat="DD/MM/YYYY" monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
-          color="secondary"></ion-datetime>
+          color="secondary" doneText="Ok"></ion-datetime>
       </ion-item>
       <ion-item>
         <ion-label color="primary" position="floating">Fecha Entrega</ion-label>
         <ion-datetime value="2019-06-08" min="2019" max="2025" [dayShortNames]="customDayShortNames"
           displayFormat="DD/MM/YYYY" monthShortNames="Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic"
-          placeholder-color="secondary"></ion-datetime>
+          placeholder-color="secondary" doneText="Ok"></ion-datetime>
       </ion-item>
      <ion-row>
        <ion-col size="12" >

@@ -4,7 +4,7 @@ import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { IonicSelectableComponent } from 'ionic-selectable';
 import { PortService, CiudadService } from '../../services';
 
-import { Port } from '../../types';
+
 import { Usuario } from 'src/app/models/usuario.model';
 
 @Component({
@@ -14,69 +14,16 @@ import { Usuario } from 'src/app/models/usuario.model';
 })
 
 export class NewShipmentFormPage implements OnInit {
- 
+  ciudadO : Usuario;
+  ciudad : Usuario;
   icon = true;
 
-  public inputs = [
-    {
-      label: "Titulo de envío",
-      icon:"",
-      state : false
-    },
-    {
-      label: "Tipo de carga",
-      icon:"",
-      state: false
-    },
-    {
-      label: "Origen",
-      icon: "search",
-      state: true
-    },
-    {
-      label: "Destino",
-      icon: "search",
-      state: true
-    },
-    {
-      label: "Fecha Recogida",
-      icon: "calendar",
-      state: true
-    },
-    {
-      label: "Fecha Entrega",
-      icon: "calendar",
-      state: true
-    }
-  ];
-
-  public shipValues = [
-    {
-      label: "Largo",
-      placeholder: "cm"
-    },
-    {
-      label: "Ancho",
-      placeholder: "cm"
-    },
-    {
-      label: "Alto",
-      placeholder: "cm"
-    },
-    {
-      label: "Peso",
-      placeholder: "Kg"
-    }
-  ]
-  
-
-
-  usuarios: any[] = [];
+  usuarios: Usuario[] = [];
   textoBuscar = '';
-  constructor( 
- 
+  constructor(  
     private usuariosService: CiudadService
-   ) {
+   )
+   {
      this.usuariosService.getUsuarios()
      .subscribe( resp => this.usuarios= resp)
    }
