@@ -15,22 +15,22 @@ export class AppComponent {
   public appPages = [
     {
       title: 'Nuevo Envío',
-      url: '/new-shipment-category',
+      url: './new-shipment-category',
       icon: 'home'
     },
     {
       title: 'Membresia',
-      url: '/membership-photo',
+      url: './membership-photo',
       icon: 'cash'
     },
     {
       title: 'Ofertas',
-      url: '/my-offers',
+      url: './Pages/my-offers',
       icon: 'cart'
     },
     {
       title: 'Mis Envios',
-      url: '/my-publishings',
+      url: './Pages/my-publishings',
       icon: 'pin'
     }
   ];
@@ -55,7 +55,7 @@ export class AppComponent {
           console.log('Auth changed: ', state);
   
           if (state){
-            this.router.navigate(['pages',  'new-shipment-category']);
+            this.router.navigate(['pages',  'search']);
           } else {
             this.router.navigate(['login']);
           }

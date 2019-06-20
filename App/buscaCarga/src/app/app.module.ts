@@ -23,6 +23,9 @@ import { NewShipmentFormPageModule } from './Pages/new-shipment-form/new-shipmen
 import {  CiudadService } from './services';
 
 import { HttpClientModule } from '@angular/common/http';
+import { SearchPageModule } from './Pages/search/search.module';
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -37,7 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
      IonicSelectableModule,
     IonicStorageModule.forRoot(),
     NewShipmentFormPageModule,
-    HttpClientModule
+    HttpClientModule,
+    SearchPageModule
+    
   ],
   providers: [
     StatusBar,

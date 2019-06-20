@@ -3,10 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  },
+ 
   { path: 'new-shipment-form',
     loadChildren: './new-shipment-form/new-shipment-form.module#NewShipmentFormPageModule' 
   },

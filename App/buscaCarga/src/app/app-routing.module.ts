@@ -19,7 +19,14 @@ const routes: Routes = [
     path: 'pages',
     canActivate: [AuthGuardService],
     loadChildren: './Pages/pages-routing.module#PagesRoutingModule'
-  },
+  }
+
+  //,
+  // {
+  //   path: 'componente',
+  //   loadChildren: './app.component.module#AppRoutingModule'
+
+  // }
   // {
   //   path: 'list',
   //   canActivate: [AuthGuardService],

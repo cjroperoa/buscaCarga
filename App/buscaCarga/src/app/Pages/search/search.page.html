@@ -15,24 +15,22 @@
     <ion-row class="ion-justify-content-center" color="secondary">
 
       <ion-col size="10">
-        <ion-label color="primary"> Origen </ion-label>
         <ion-item>
-          <ion-input color="secondary" required></ion-input>
-
-          <ion-button>
-            <ion-icon slot="icon-only" name="search"></ion-icon>
-          </ion-button>
+          <ion-label color="primary">Origen</ion-label>
+          <ionic-selectable item-content [(ngModel)]='ciudadO' itemValueField="id" itemTextField="name"
+            [items]="usuarios" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
+            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarUsuario($event)'>
+          </ionic-selectable>
 
         </ion-item>
       </ion-col>
       <ion-col size="10">
-        <ion-label color="primary"> Destino </ion-label>
         <ion-item>
-          <ion-input color="secondary" required></ion-input>
-
-          <ion-button>
-            <ion-icon slot="icon-only" name="search"></ion-icon>
-          </ion-button>
+          <ion-label color="primary">Destino</ion-label>
+          <ionic-selectable item-content [(ngModel)]='ciudadD' itemValueField="id" itemTextField="name"
+            [items]="usuarios" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
+            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarUsuario($event)'>
+          </ionic-selectable>
 
         </ion-item>
       </ion-col>

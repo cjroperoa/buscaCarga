@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { text } from '@angular/core/src/render3';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { IonicSelectableComponent } from 'ionic-selectable';
-import { PortService, CiudadService } from '../../services';
-
-
+import {  CiudadService } from '../../services';
 import { Usuario } from 'src/app/models/usuario.model';
 
 @Component({

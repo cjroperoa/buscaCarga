@@ -6,7 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { SearchPage } from './search.page';
-
+import { IonicSelectableModule } from 'ionic-selectable';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +20,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    IonicSelectableModule,
+    PipesModule
   ],
   declarations: [SearchPage]
 })
