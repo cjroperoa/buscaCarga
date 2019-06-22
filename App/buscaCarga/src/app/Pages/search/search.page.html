@@ -17,9 +17,9 @@
       <ion-col size="10">
         <ion-item>
           <ion-label color="primary">Origen</ion-label>
-          <ionic-selectable item-content [(ngModel)]='ciudadO' itemValueField="id" itemTextField="name"
-            [items]="usuarios" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
-            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarUsuario($event)'>
+          <ionic-selectable item-content [(ngModel)]='ciudadO' itemValueField="id" itemTextField="municipio"
+            [items]="ciudades" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
+            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarCiudad($event)'>
           </ionic-selectable>
 
         </ion-item>
@@ -27,9 +27,9 @@
       <ion-col size="10">
         <ion-item>
           <ion-label color="primary">Destino</ion-label>
-          <ionic-selectable item-content [(ngModel)]='ciudadD' itemValueField="id" itemTextField="name"
-            [items]="usuarios" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
-            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarUsuario($event)'>
+          <ionic-selectable item-content [(ngModel)]='ciudadD' itemValueField="id" itemTextField="municipio"
+            [items]="ciudades" [canSearch]="true" closeButtonText="Cerrar" closeButtonSlot="end"
+            searchPlaceholder="Buscar" searchFailText="Sin Información" (ionChange)='buscarCiudad($event)'>
           </ionic-selectable>
 
         </ion-item>
@@ -37,7 +37,7 @@
     </ion-row>
 
 
-    <ion-button class="ion-float-right ion-padding-horizontal" (click)="stateValidate(true)">Primary</ion-button>
+    <ion-button class="ion-float-right ion-padding-horizontal" (click)="stateValidate(true)">Buscar</ion-button>
   </ion-grid>
   <ion-grid padding *ngIf="estate">
     <!-- List of Sliding Items -->

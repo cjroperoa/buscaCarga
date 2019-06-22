@@ -42,7 +42,6 @@ import { SearchPageModule } from './Pages/search/search.module';
     NewShipmentFormPageModule,
     HttpClientModule,
     SearchPageModule
-    
   ],
   providers: [
     StatusBar,

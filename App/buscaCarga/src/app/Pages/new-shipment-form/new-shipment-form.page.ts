@@ -4,6 +4,8 @@ import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { IonicSelectableComponent } from 'ionic-selectable';
 import {  CiudadService } from '../../services';
 import { Usuario } from 'src/app/models/usuario.model';
+import { Ciudad } from 'src/app/models/ciudad.model';
+
 
 @Component({
   selector: 'app-new-shipment-form',
@@ -12,28 +14,24 @@ import { Usuario } from 'src/app/models/usuario.model';
 })
 
 export class NewShipmentFormPage implements OnInit {
-  ciudadO : Usuario;
-  ciudadD : Usuario;
+  ciudadO: Ciudad;
+  ciudadD: Ciudad;
   icon = true;
 
-  usuarios: Usuario[] = [];
+  ciudades: Ciudad[] = [];
   textoBuscar = '';
-  constructor(  
-    private usuariosService: CiudadService
-   )
-   {
-     this.usuariosService.getUsuarios()
-     .subscribe( resp => this.usuarios= resp)
+  constructor(private ciudadesService: CiudadService
+   ) {
+     this.ciudadesService.getCiuadades()
+     .subscribe( resp => this.ciudades = resp);
    }
 
   ngOnInit() {}
 
 
-  buscarUsuario(event){
+  buscarCiudad(event) {
     const texto = event.target.value;
-  this.textoBuscar= texto;
-  console.log(texto);
-   
+    this.textoBuscar = texto;
+    console.log(texto);
   }
-  
 }
