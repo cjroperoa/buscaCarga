@@ -16,9 +16,9 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(
-   bodyParser.urlencoded({ extend: false })
-);
+// app.use(
+//    //bodyParser.urlencoded({ extend: true })
+// );
 
 const Users = require('../auth/auth.routes');
 
