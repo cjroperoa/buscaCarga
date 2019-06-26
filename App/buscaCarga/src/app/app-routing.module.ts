@@ -10,10 +10,10 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    loadChildren: './Public/login/login.module#LoginPageModule'
+    loadChildren: './public/login/login.module#LoginPageModule'
   },
   { path: 'registry', 
-    loadChildren: './Public/registry/registry.module#RegistryPageModule' 
+    loadChildren: './public/registry/registry.module#RegistryPageModule' 
   },
   {
     path: 'pages',
