@@ -1,0 +1,2 @@
+https://www.youtube.com/watch?v=5fNlrEDolko
+http://181.49.164.74/phpmyadmin/tbl_structure.php?db=bc-project&table=Usuario&token=e296ca57ce258bce8adb0d9ed845b0a1

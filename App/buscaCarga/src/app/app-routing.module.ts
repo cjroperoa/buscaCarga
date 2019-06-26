@@ -12,8 +12,13 @@ const routes: Routes = [
     path: 'login',
     loadChildren: './public/login/login.module#LoginPageModule'
   },
+<<<<<<< HEAD
   { path: 'registry',
     loadChildren: './public/registry/registry.module#RegistryPageModule'
+=======
+  { path: 'registry', 
+    loadChildren: './public/registry/registry.module#RegistryPageModule' 
+>>>>>>> cjropero-testing
   },
   {
     path: 'pages',
