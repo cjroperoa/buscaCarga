@@ -1,5 +1,7 @@
 {
   "name": "buscaCarga",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
