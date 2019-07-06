@@ -12,21 +12,14 @@ const routes: Routes = [
     path: 'login',
     loadChildren: './public/login/login.module#LoginPageModule'
   },
-  { path: 'registry',
-    loadChildren: './public/registry/registry.module#RegistryPageModule'
+  { path: 'registry', 
+    loadChildren: './public/registry/registry.module#RegistryPageModule' 
   },
   {
     path: 'pages',
     canActivate: [AuthGuardService],
     loadChildren: './Pages/pages-routing.module#PagesRoutingModule'
   }
-
-  //,
-  // {
-  //   path: 'componente',
-  //   loadChildren: './app.component.module#AppRoutingModule'
-
-  // }
   // {
   //   path: 'list',
   //   canActivate: [AuthGuardService],
