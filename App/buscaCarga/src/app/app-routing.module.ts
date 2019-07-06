@@ -19,7 +19,7 @@ const routes: Routes = [
     path: 'pages',
     canActivate: [AuthGuardService],
     loadChildren: './Pages/pages-routing.module#PagesRoutingModule'
-  },
+  }
   // {
   //   path: 'list',
   //   canActivate: [AuthGuardService],
