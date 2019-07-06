@@ -13,10 +13,9 @@
 const Sequelize = require('sequelize');
 const db = {};
 const sequelize = new Sequelize('bc-project', 'root', '5i5t3m45', {
-  host: 'http://181.49.164.74:3306/',
+  host: 'http://190.254.1.237:3306/',
   dialect: 'mysql',
-  operatorsAliases: false,
-
+  //operatorsAliases: false,
   pool: {
     max: 5,
     min: 0,
